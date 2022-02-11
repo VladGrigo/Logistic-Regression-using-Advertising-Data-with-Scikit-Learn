@@ -20,6 +20,7 @@ def ValuePredictor(to_predict_list):
     to_predict = np.array(to_predict_list).reshape(1,5)
     loaded_model = pickle.load(open("advertising_model.sav","rb"))
     result = loaded_model.predict(to_predict)
+    print("predict")
     return result[0]
 
 
